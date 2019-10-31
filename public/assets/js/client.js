@@ -13,13 +13,16 @@ const getWeather = function (address) {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error);
-                message02.textContent = `Error: ${data.error}`;
-                message01.textContent = '';
+                message02.innerHTML = `Error: ${data.error}`;
+                message01.innerHTML = '';
                 search.value = '';
             }
             else {
-                message01.textContent = `Temperature: ${data.temperature} & Location: ${data.location}`;
-                message02.textContent = '';
+                message01.innerHTML = ` <hr>
+                                         Temperature: ${data.temperature} Fahrenheit. 
+                                        <br> <hr> Forecast: ${data.summery} 
+                                        <br> <hr>  Location: ${data.location} <br> <hr>`;
+                message02.innerHTML = '';
                 search.value = '';
             }
         });

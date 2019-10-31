@@ -96,7 +96,7 @@ app.get('/weather', (req, res) => {
         }
         else {
             // Object Destructure is used;
-            forecast.forecast( latitude, longitude, ( error, { temperature, precipProbability } = {} ) => {
+            forecast.forecast( latitude, longitude, ( error, { temperature, precipProbability, summery } = {} ) => {
                 if(error){
                     // console.log(`Error: ${error}`);
                     res.send({ error });
@@ -105,6 +105,7 @@ app.get('/weather', (req, res) => {
                     const newData = {
                         temperature,
                         precipProbability,
+                        summery,
                         location
                     }
                     // console.log(newData);
@@ -112,6 +113,7 @@ app.get('/weather', (req, res) => {
                         {
                             temperature: newData.temperature,
                             precipProbability: newData.precipProbability,
+                            summery: newData.summery,
                             location: newData.location,
                             address: req.query.address
                         });
