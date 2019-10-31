@@ -13,6 +13,8 @@ const geocode = (address, callback) => {
     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?
 types=address&access_token=pk.eyJ1Ijoia2hhbGVkMzAxIiwiYSI6ImNrMXUyZjZrdDAxdzkzY3FnZ2N3YnZ4NHcifQ.jcMnRZD6yhhe7HyIEM1FOQ&limit=1`;
 
+//     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?{YOUR ACCESS TOKEN FROM mapbox.com}&limit=1`;
+
     request( { url: url, json: true }, (err, response, body) => {
 
         if (err) {

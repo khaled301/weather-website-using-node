@@ -63,7 +63,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
         name: 'Khaled Hasan',
-        imgSrc: '/assets/images/pizza.jpg'
+        imgSrc: '/assets/images/weather.gif'
     })
 
 });
