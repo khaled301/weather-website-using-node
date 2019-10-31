@@ -19,7 +19,7 @@ const getWeather = function (address) {
             }
             else {
                 message01.innerHTML = ` <hr>
-                                         Temperature: ${data.temperature} Fahrenheit. 
+                                         Heat: ${data.temperature} Fahrenheit. 
                                         <br> <hr> Forecast: ${data.summery} 
                                         <br> <hr>  Location: ${data.location} <br> <hr>`;
                 message02.innerHTML = '';
