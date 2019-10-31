@@ -8,7 +8,7 @@ const message02 = document.querySelector('#message-02');
 
 const getWeather = function (address) {
 
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+    fetch(`/weather?address=${address}`).then((response) => {
 
         response.json().then((data) => {
             if (data.error) {
